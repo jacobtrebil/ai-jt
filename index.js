@@ -6,7 +6,7 @@ const ai = require('./api/completion/route');
 
 const router = express.Router();
 
-router.use("/ai", ai);
+// router.use("/ai", ai);
 
 app.get('/', (req, res) => {
   console.log('Welcome to the Express API');
