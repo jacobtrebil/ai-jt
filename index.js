@@ -4,6 +4,10 @@ const app = express()
 const PORT = 4000
 const ai = require('./api/completion/route');
 
+const router = express.Router();
+
+router.use("/ai", ai);
+
 app.get('/', (req, res) => {
   console.log('Welcome to the Express API');
   res.status(200).json('Welcome, your app is working well');
