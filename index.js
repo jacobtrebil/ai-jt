@@ -14,10 +14,10 @@ app.get('/', (req, res) => {
 });
 
 app.get('/ai', (req, res) => { 
-    // ai 
-    res.status(200).json('Welcome, your app is working well');
+    res.status(200).send(ai.POST());
+    // res.send(ai());
     // res.render(ai);
-});
+}); 
 
 app.listen(PORT, () => {
   console.log(`Server running at http://localhost:${PORT}`);
