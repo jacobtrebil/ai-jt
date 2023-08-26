@@ -2,15 +2,15 @@ import OpenAI from "openai";
 import { OpenAIStream, StreamingTextResponse } from "ai";
 
 // Create an OpenAI API client (that's edge friendly!)
-const openai = new OpenAI({
+/* const openai = new OpenAI({
     apiKey: process.env.OPENAI_API_KEY,
-  });
+  }); */
 
 // Set the runtime to edge for best performance
 export const runtime = 'edge';
 
 export async function POST(req: Request) {
-    const { prompt } = await req.json();
+    /* const { prompt } = await req.json();
    
     // Ask OpenAI for a streaming completion given the prompt
     const response = await openai.completions.create({
@@ -25,7 +25,7 @@ export async function POST(req: Request) {
   Slogans: "Peak Performance", "Reach New Heights", "Climb Your Way Fit"
   Business: random
   Slogans:`,
-    });
+    }); */
 
     // Convert the response into a friendly text-stream
     // const stream = OpenAIStream(response);
