@@ -2,7 +2,7 @@
 const express = require('express')
 const app = express()
 const PORT = 4000
-const ai = require('./api/completion/route');
+const ai = require('./app/api/completion/route');
 
 const router = express.Router();
 
@@ -14,7 +14,8 @@ app.get('/', (req, res) => {
 });
 
 app.get('/ai', (req, res) => { 
-    res.status(200).send(ai.POST());
+    console.log(ai.POST());
+    res.send(ai.POST());
     // res.send(ai());
     // res.render(ai);
 }); 
